@@ -2,60 +2,89 @@
 <html>
 <head>
 	<title>My First Webpage</title>
-	<meta charset="UTF=8">
+	<meta charset="UTF-8">
 	<meta name="description" content="This is my first HTML page.">
-	<meta name="keywords" content="HTML, begginer, web development">
+	<meta name="keywords" content="HTML, beginner, web development">
 	<meta name="author" content="Jules Andre C. Doriquez">
 	<style>
-		body { font-family: Arial, sans-serif; background-color #f5f5f5; }
-		h1 { color: #2c3e50; }
+		body { font-family: Arial, sans-serif; background-color:#F5F5F5; }
+		h1 {
+  			color: #455A64;
+			text-align: center;
+			font-size: 3em;
+			text-shadow:
+				2px 2px 0 #90A4AE,
+				4px 4px 0 #B0BEC5,
+				6px 6px 0 #CFD8DC;
+		}	
+		
+		h2 {
+			color: #5C6F68;
+			text-align: center;
+			font-size: 2.5em;
+			text-shadow:
+				1px 1px 0 #AAB6B2,
+				2px 2px 0 #CBD3D0,
+				3px 3px 0 #E5EAE8;
+		}
 		p { line-height: 1.5; }
-		.highlight { background-color: yellow; }
+
+		.highlight { 
+			background-color: rgb(163, 163, 172); 
+		}
 	</style>
 	<script>
-		funtion greet() {
+		function greet() {
 			alert("Hello! Welcome to my page.");
 		}
 	</script>
 </head>
 <body onload="greet()">
-	<h1>Welcome to My First Webpage</h1>
-	<p>This is a <b>bold</b> statement, and here is some <i>italic</i> text.</p>
-	<p class="highlight">This paragraph is highlighted using CSS.</p>
-	<h2>My Favorite Fruits</h2>
-	<ul>
-		<li>Mango</li>
-		<li>Banana</li>
-		<li>Apple</li>
-	</ul>
-	<h2>Steps to Make Tea</h2>
-	<ol>
-		<li>Boil water</li>
-		<li>Add tea leaves</li>
-		<li>Pour into a cup</li>
-	</ol>
+	<h1 style="text-align: center;">Welcome to My First Webpage</h1>
+	<p style="text-align: center; font-size: 20px;">This is a <b>bold</b> statement, and here is some <i>italic</i> text.</p>
+	<p class="highlight" style="text-align: center; font-size: 25px;">This paragraph is highlighted using CSS.</p>
+	<div class="favorites-container" style="border: 2px solid #2e2e30; padding: 20px; margin: 20px auto; max-width: 900px; background-color: #ffffff;">
+	<div style="display: flex; justify-content: space-around;">
+		<div>
+		<h2>My Favorite Fruits</h2>
+		<ul style="font-size: 25px;">
+			<li>Mango</li>
+			<li>Banana</li>
+			<li>Apple</li>
+		</ul>
+		</div>
+		<div>
+		<h2>Steps to Make Tea</h2>
+		<ol style="font-size: 25px;">
+			<li>Boil water</li>
+			<li>Add tea leaves</li>
+			<li>Pour into a cup</li>
+		</ol>
+		</div>
+	</div>
+	</div>
 	<!-- This is a comment: The above lists show unordered and ordered lists -->
-	<p>Visit <a href="https://www.example.com" target="_blank">Example Website</a> for more info.</p>
-	<h2>My Favorite Song</h2>
-	<audio controls>
+	<p style="text-align: center; font-size: 20px;">Visit <a href="https://www.example.com" target="_blank">Example Website</a> for more info.</p><br><br>
+	<h2>My Favorite Song</h2><br>
+	<audio controls style="display: block; margin: 0 auto;">
 		<source src="Flo Rida feat. T-Pain - Low.mp3" type="audio/mpeg">
 		Your browser does not support the audio element.
 	</audio>
-	
-	<h2>My favorite Movie Scene</h2>
-	<video width="320" height="240" controls>
+	<br><br><br>
+	<h2>My Favorite Movie Scene</h2><br>
+	<video width="800" height="600" controls style="display: block; margin: 0 auto;">
 		<source src="Dumb and dumber movie scene.mp4" type="video/mp4">
 		Your browser does not support the video tag.
 	</video>
-	
+	<br><br><br><br>
 	<h2>My Favorite Picture</h2>
-	<img src="1351907-Field-SunriseLavender-HD-Wallpaper.jpg" alt="A beautiful view" width="300">
-	<div style="border:1px solid #000; padding:10px; margin-top:10px;">
-		<p>This is a block container using <span sytle="color:red;">div</span> and <span style="font-weight:bold;">span</span> elements.</p>
+	<img style="display: block; margin: 0 auto;" src="kap.jpg" alt="A beautiful view" width="800">
+	<div style="border:1px solid #000; padding:10px; margin-top:10px; background-color: #6CA0DC;">
+		<p style="text-align: center; font-size: 30px;">This is a block container using <span style="color:rgb(239, 243, 5);">div</span> and <span style="font-weight:bold;">span</span> elements.</p>
 	</div>
-	
+
 	<h2>Class Schedule</h2>
-	<table border="1" cellpadding="5">
+	<table border="3" cellpadding="10" cellspacing="0" style="width:50%; text-align: center; margin: 0 auto; border-collapse: collapse;">
 		<tr>
 			<th>Day</th>
 			<th>Subjects</th>
@@ -68,19 +97,35 @@
 			<td>Tuesday</td>
 			<td>CSS Basics</td>
 		</tr>
+		<tr>
+			<td>Wednesday</td>
+			<td>HTML Basics</td>
+		</tr>
+		<tr>
+			<td>Thursday</td>
+			<td>CSS Basics</td>
+		</tr>
+		<tr>
+			<td>Friday</td>
+			<td>CSS Basics</td>
+		</tr>
 	</table>
+	<br><br><br><br>
+
 	<h2>Contact Me</h2>
-	<form>
-		<label for="name">Name:</label>
-		<input type="text" id="name" name="name"><br><br>
+<div class="favorites-container" style="border: 2px solid #2e2e30; padding: 20px; margin: 20px auto; max-width: 350px;">
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
 
-		<label for="email">Email:</label>
-		<input type="email" id="email" name="email"><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
 
-		<label for="message">Message:</label><br>
-		<textarea id="message" name="message"></textarea><br><br>
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message"></textarea><br><br>
 
-		<input type="submit" value="Send">
-	</form>
+    <input type="submit" value="Send">
+  </form>
+</div>
 </body>
 </html>
